@@ -40,36 +40,36 @@ request.addEventListener('load', (event) => {
 
 function cargarListeners() {
   audio.addEventListener('timeupdate', updateTrack, false);
-  audio.addEventListener('loadedmetadata', function () {
+  audio.addEventListener('loadedmetadata', function () { // eslint-disable-line
     duration = this.duration;
   }, false);
-  window.onmousemove = function (e) {
+  window.onmousemove = function (e) { // eslint-disable-line
     e.preventDefault();
     if (holding) seekTrack(e);
   }
-  window.onmouseup = function (e) {
+  window.onmouseup = function (e) { // eslint-disable-line
     holding = false;
     console.log(holding);
   }
-  track.onmousedown = function (e) {
+  track.onmousedown = function (e) { // eslint-disable-line
     holding = true;
     seekTrack(e);
   }
-  play.onclick = function () {
+  play.onclick = function () { // eslint-disable-line
     playing ? audio.pause() : audio.play();
     playing = !playing;
   }
-  audio.addEventListener("pause", function () {
+  audio.addEventListener('pause', function () { // eslint-disable-line
     play.innerHTML = '<img class="pad" src="http://abarcarodriguez.com/lab/play.png"/>';
     playing = false;
   }, false);
 
-  audio.addEventListener("playing", function () {
+  audio.addEventListener('playing', function () { // eslint-disable-line
     play.innerHTML = '<img src="http://abarcarodriguez.com/lab/pause.png"/>';
     playing = true;
   }, false);
-  next.addEventListener("click", nextTrack, false);
-  prev.addEventListener("click", prevTrack, false);
+  next.addEventListener('click', nextTrack, false);
+  prev.addEventListener('click', prevTrack, false);
 }
 
 request.responseType = 'json';
@@ -92,14 +92,14 @@ function seekTrack(e) {
   progress.style.width = percent + '%';
   handler.style.left = percent + '%';
   audio.play();
-  audio.currentTime = (percent * duration) / 100
+  audio.currentTime = (percent * duration) / 100;
 }
 function nextTrack() {
   currentTrack++;
   currentTrack = currentTrack % (response.length);
   song = response[currentTrack];
   audio.src = song.song;
-  audio.onloadeddata = function () {
+  audio.onloadeddata = function () { // eslint-disable-line
     updateInfo();
   }
 }
@@ -109,7 +109,7 @@ function prevTrack() {
   currentTrack = (currentTrack == -1 ? (response.length - 1) : currentTrack);
   song = response[currentTrack];
   audio.src = song.song;
-  audio.onloadeddata = function () {
+  audio.onloadeddata = function () { // eslint-disable-line
     updateInfo();
   }
 }
@@ -118,7 +118,7 @@ function updateInfo() {
   title.textContent = song.name;
   artist.textContent = song.artist;
   art.src = song.image;
-  art.onload = function () {
+  art.onload = function () { // eslint-disable-line
     audio.play();
   }
 }
@@ -129,11 +129,11 @@ const closeModal = document.getElementsByClassName('close')[0];
 
 for (const i of openModal) {
   i.addEventListener('click', () => {
-    modal.style.display = "block";
+    modal.style.display = 'block';
   })
 }
-closeModal.onclick = function () {
-  modal.style.display = "none";
+closeModal.onclick = function () { // eslint-disable-line
+  modal.style.display = 'none';
   video.pause();
 }
 
@@ -143,12 +143,11 @@ function random() {
 }
 btnAleatortio.onclick = () => {
   const num = random();
-  console.log(num);
   currentTrack = num;
   currentTrack = currentTrack % (response.length);
   song = response[currentTrack];
   audio.src = song.song;
-  audio.onloadeddata = function () {
+  audio.onloadeddata = function () { // eslint-disable-line
     updateInfo();
   }
 };
