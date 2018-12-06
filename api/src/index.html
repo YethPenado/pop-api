@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+  <title>Audio & Video API</title>
+</head>
+
+<body>
+    <div id="instructions">
+      <h1>Pop Music API</h1>
+      <p class="p-instruction">Welcome to our musical app. Interact with the player to listen to a select list of current pop hits. On your right, you will find a list where you can watch the music video of the songs on this list.</p>
+    </div>
+  <div id="player">
+    <img src="" class="cover" id="art" />
+    <div class="trackinfo">
+      <p id="title"></p>
+      <p id="artist"></p>
+    </div>
+    <div id="track">
+      <div id="progress"></div>
+      <div id="handler"></div>
+    </div>
+    <div id="container">
+      <div class="info">
+        <div class="cont">
+          <button id="prev" class="nav">
+            <img src="http://abarcarodriguez.com/lab/prev.png" />
+          </button>
+          <button id="play" class="nav">
+            <img class="pad" src="http://abarcarodriguez.com/lab/play.png" />
+          </button>
+          <button id="next" class="nav">
+            <img src="http://abarcarodriguez.com/lab/next.png" />
+            <button class="nav" id="aleatorio" value="">
+              <img src="img/random.png" />
+            </button>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar">
+
+    <!-- 0 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Imagine Dragons</h2>
+        <h3>Believer</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Blondie</h2>
+        <h3>Call Me</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Christina Aguilera</h2>
+        <h3>Candyman</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Madonna</h2>
+        <h3>Celebration</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Sia ft Sean Paul</h2>
+        <h3>Cheap Thrills</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Marshmello ft Anne Marie</h2>
+        <h3>Friends</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>L.S.D</h2>
+        <h3>Genius</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Ariana Grande</h2>
+        <h3>Greedy</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Marshmello ft Bastille</h2>
+        <h3>Happier</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Mariah Carey</h2>
+        <h3>Honey</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Rag'n'Bone Man</h2>
+        <h3>Human</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Modjo</h2>
+        <h3>Lady Hear Me Tonight</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Billie Eilish</h2>
+        <h3>Lovely</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Miley Cyrus</h2>
+        <h3>Nothing Breaks Like a Heart</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Mis-Teeq</h2>
+        <h3>Scandalous</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Ariana Grande</h2>
+        <h3>Thank u, Next</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>L.S.D</h2>
+        <h3>Thunderclouds</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Billie Eilish</h2>
+        <h3>When The Party's Over</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 18 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>5 Seconds of Summer</h2>
+        <h3>Youngblood</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- 19 -->
+    <div class="cajas">
+      <button class="clic-info">
+        <h2>Shawn Mendes</h2>
+        <h3>Youth</h3>
+      </button>
+      <div id="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <video id="video1" src="" controls></video>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

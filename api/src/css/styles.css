@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rajdhani', sans-serif;
+}
+body {
+  background-color: #F18F83;
+}
+#instructions{
+  color: #F3E0DE;
+  font-size: 1.3em;
+  width: 30%;
+  padding-left: 3%;
+  display: inline-block;
+}
+
+h1{
+  padding-top: 20px;
+}
+.p-instruction{
+  padding-top: 12px; 
+}
+#player {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%; left: 50%;
+  margin-left: -20%;
+  margin-top: -10%;
+  border-radius: 50%;
+  border: 1px solid #D0D0D0;
+}
+#player .cover {
+  width: 400px;
+  position: absolute;
+  top: 0;
+  left:0;
+  border-radius: 50%;
+}
+#player #container {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+#player .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 115px;
+  background-color: #FFF;
+}
+#player .info .cont {
+  text-align: center;
+  padding-top: 25px;
+}
+#player .trackinfo {
+  position: absolute;
+  bottom: 135px;
+  color: #FFF;
+}
+#player .trackinfo p {
+  text-shadow: 0px 0px 5px #333;
+}
+#player .trackinfo #title {
+  font-weight: bold;
+  font-size: 30px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+#player .trackinfo #artist {
+  padding-left: 25px;
+}
+#track {
+  width: 366px;
+  height: 5px;
+  position: absolute;
+  background-color: #A6A7A9;
+  bottom: 115px;
+  left: 17px;
+  z-index: 10;
+  cursor: pointer;
+}
+#progress {
+  float: left;
+  height: 5px;
+  width: 0%;
+  background: #00CC99;
+  cursor: pointer;
+}
+#handler {
+  display: none;
+}
+.nav {
+  width: 50px;
+  height: 50px;
+  vertical-align: top;
+  background-color: #FFF;
+  border: 2px solid #00CC99;
+  border-radius: 50%;
+  outline: none;
+  margin: 0 7px;
+  cursor: pointer;
+}
+.nav:hover {
+  background-color: #00CC99;
+}
+.nav img {
+  height: 20px;
+  vertical-align: middle;
+}
+.pad {
+  padding-left: 5px;
+}
+#prev {
+  padding-right: 5px;
+}
+#next {
+  padding-left: 4px;
+}
+#sidebar{
+  padding: 25px;
+  width: 400px;
+  height: 850px;
+  overflow: scroll;
+  float: right;
+}
+#sidebar::-webkit-scrollbar{
+  width: 7px;
+}
+
+#sidebar::-webkit-scrollbar-thumb{
+  background-color:#538895;
+  border-radius: 5px;
+}
+.cajas{
+  background-color: #F3E0DE;
+  padding: 10px;
+  width: 300px;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+.clic-info{
+  margin: 15px;
+  background-color:transparent;
+  border: 0;
+  border-radius: 5px;
+  color: #538895;
+  font-size: 16px;
+  padding: 5px
+}
+#modal{
+  display: none;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  position: fixed;
+}
+.modal-content{
+  background-color: #538895;
+  border-radius: 5px;
+  color: #538895;
+  margin: 10% auto;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+  z-index: 1;
+}
+.close{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 8px;
+}
